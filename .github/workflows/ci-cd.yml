@@ -72,10 +72,10 @@ jobs:
           password: ${{ secrets.VM_PASSWORD }}
           script: |
             echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mon-app:latest
-            docker stop myapp 2>/dev/null || true
-            docker rm myapp 2>/dev/null || true
-            docker run -d \
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/mon-app:latest
+            sudo docker stop myapp 2>/dev/null || true
+            sudo docker rm myapp 2>/dev/null || true
+            sudo docker run -d \
               --name myapp \
               --restart unless-stopped \
               -p 3000:3000 \
