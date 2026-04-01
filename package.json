@@ -1,0 +1,37 @@
+{
+  "name": "tp_deploiement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --forceExit",
+    "cypress:run": "cypress run"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcdt/tp_deploiement.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mrcdt/tp_deploiement/issues"
+  },
+  "homepage": "https://github.com/mrcdt/tp_deploiement#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "cypress": "^15.13.0",
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
+}
